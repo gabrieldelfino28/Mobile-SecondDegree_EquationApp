@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etValA"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/a_inicial"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etValB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabel" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="46dp"
+        android:importantForAutofill="no"
+        android:shadowColor="@color/black"
+        android:text="@string/equacao_segundoGrau"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etValA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/button_calc"
+        app:layout_constraintBottom_toTopOf="@+id/tvAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValC" />
+
+    <TextView
+        android:id="@+id/tvOutputX1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOutputX2" />
+
+    <TextView
+        android:id="@+id/tvOutputX2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvOutputX1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDelta" />
+
+    <TextView
+        android:id="@+id/tvDelta"
+        android:layout_width="188dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvOutputX2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnswer"
+        tools:text="@string/delta" />
+
+    <EditText
+        android:id="@+id/etValB"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/b_inicial"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etValC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValA" />
+
+    <EditText
+        android:id="@+id/etValC"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="@string/c_inicial"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValB" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDelta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
